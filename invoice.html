@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <center><h1>SUAVE TAILOR</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Produk</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="invoice.html">Invoice</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main class="invoice">
+            <center><h2>Invoice</h2></center>
+            <p><strong>Nomber Seri : 00012681965</strong> 
+            <p><strong>Nama:</strong> <span id="invoiceNama"></span></p>
+            <p><strong>Alamat:</strong> <span id="invoiceAlamat"></span></p>
+            <p><strong>Produk:</strong> <span id="invoiceProduk"></span></p>
+            <p><strong>Ukuran:"menyesuaikan stock"</strong> 
+            <p><strong>Total :</strong> <span id="invoiceTotal"></span></p>
+            <p><strong>Tanggal Pemesanan:</strong> <span id="invoiceTanggal"></span></p>
+            <p><strong>Estimasi sampai  :</strong> <span id="invoicePickupDate"></span></p>
+            <p><strong>Exspedisi  : TNT Express</strong><br><br>
+                <button id="last">OK</button>
+                
+        </main>
+    </div>
+    
+    <script>
+        document.getElementById('last').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('invoiceNama').textContent = urlParams.get('nama');
+        document.getElementById('invoiceNama').textContent = urlParams.get('nama');
+        document.getElementById('invoiceAlamat').textContent = urlParams.get('alamat');
+        document.getElementById('invoiceProduk').textContent = urlParams.get('JasType');
+        document.getElementById('invoiceTotal').textContent = 'Rp ' + new Intl.NumberFormat('id-ID').format(urlParams.get('price'));
+        document.getElementById('invoiceTanggal').textContent = urlParams.get('date');
+        document.getElementById('invoicePickupDate').textContent = urlParams.get('pickupDate');
+    </script>
+    <script src="script.js"></script>
+    <footer>
+        <marquee><h3>SPESIALIS JAS HIGHT QUALITY</h3></marquee></center>
+    </footer>
+</body>
+</html>

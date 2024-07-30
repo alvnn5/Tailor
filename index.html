@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link rel="stylesheet" href="styles.css">
+	
+</head>
+<body>
+    <header>
+        <center><h1>SUAVE TAILOR</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Produk</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="invoice.html">Invoice</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        
+        <main class="content">
+            <center><h2>TAILOR JAS PREMIUM</h2>
+            <hr>
+            <div class="produk">
+                <img src="img/JAS (1).png" width="400" height="400" alt="hightend">
+                <h3>HIGHTEND</h3>
+                <h4>S/M/L/XL/XXL</h4>
+                <p>Rp 9.000.000</p>
+                <button id="pesan">BUAT PESANAN</button>
+            </div> <br>
+            <div class="produk">
+                <img src="img/JAS (2).png" width="400" height="400" alt="insider">
+                <h3>INSIDER</h3>
+                <h4>S/M/L/XL/XXL</h4>
+                <p>Rp 5.000.000</p>
+                <button id="pesan2">BUAT PESANAN</button> 
+            </div><br>
+            <div class="produk">
+                <img src="img/JAS (3).png" width="400" height="400" alt="blazzer">
+                <h3>BLAZZER</h3>
+                <h4>S/M/L/XL/XXL</h4>
+                <p>Rp 7.500.000</p>
+                <button id="pesan3">BUAT PESANAN</button>
+            </div> <br>
+        </center>
+        </main>
+        <aside class="right">
+            <center>
+                DESKRIPTION
+            </center>
+            <hr>
+            <ul>
+            <li>
+                SUAVE TAILOR kami mengkhususkan diri dalam pembuatan dan penyesuaian jas pria berkualitas tinggi. Berdiri sejak tahun 1997, kami telah melayani berbagai kebutuhan pakaian formal untuk para profesional, pengusaha, dan individu yang mengutamakan penampilan elegan dan berkelas.
+            </li>
+            <li>
+                Dengan pengalaman bertahun-tahun dan keahlian dalam seni menjahit, Royal Tailor menawarkan layanan pembuatan jas yang disesuaikan dengan ukuran dan preferensi pelanggan. Kami menggunakan bahan-bahan terbaik dan teknik penjahitan yang teliti untuk memastikan setiap jas yang kami buat tidak hanya pas, tetapi juga nyaman dan tahan lama.
+            </li>
+            </ul>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('pesan').addEventListener('click', function() {
+            window.location.href = 'transaksi.html?Jas=hightend';
+        });
+        document.getElementById('pesan2').addEventListener('click', function() {
+            window.location.href = 'transaksi.html?JasType=insider';
+        });
+        document.getElementById('pesan3').addEventListener('click', function() {
+            window.location.href = 'transaksi.html?Jas=blazzer';
+        });
+    </script>
+    <footer>
+        <marquee><h3>SPESIALIS JAS HIGHT QUALITY</h3></marquee></center>
+    </footer>
+</body>
+</html>

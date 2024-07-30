@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi Pembayaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <center><h1>SUAVE TAILOR</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Produk</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="invoice.html">Invoice</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main class="form-transaksi">
+            <center><h2>Formulir Pemesanan</h2>
+            <form id="transaksiForm">
+                <label for="nama">Nama Pemesan:</label><br>
+                <input type="text" id="nama" name="nama"><br><br>
+                <label for="alamat">Alamat:</label><br>
+                <textarea id="alamat" name="alamat"></textarea><br><br>
+                <label for="produk">Produk Yang Dipesan:</label><br>
+                <div>
+                    <input type="radio" id="hightend" name="JasType" value="hightend" data-price="9000000">
+                    <label for="hightend">HIGHTEND</label>
+                </div>
+                <div>
+                    <input type="radio" id="insider" name="JasType" value="insider" data-price="5000000">
+                    <label for="insider">INSIDER</label>
+                </div>
+                <div>
+                    <input type="radio" id="blazzer" name="JasType" value="blazzer" data-price="7500000">
+                    <label for="blazzer">BLAZZER</label>
+                </div><br>
+                <label for="ukuran">Pilih Ukuran:</label> <br>
+        <select id="ukuran" name="ukuran" required>
+            <option value="R">Random</option>
+            <option value="s">S (kecil)</option>
+            <option value="m">M (sedang)</option>
+            <option value="l">L (besar)</option>
+            <option value="xl">XL (sangat besar)</option>
+        </select><br><br>
+                <label for="date">Tanggal Pemesanan:</label><br>
+                <input type="date" id="date" name="date" required><br><br>
+                <button type="button" onclick="buatPesanan()">Pesan Sekarang</button>
+                <button type="reset">Ulang</button>
+            </form>
+        </center>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const motorType = urlParams.get('motor');
+
+        if (JasType) {
+            document.getElementById(JasType).checked = true;
+        }
+    </script>
+    <footer>
+        <marquee><h3>SPESIALIS JAS HIGHT QUALITY</h3></marquee></center>
+    </footer>
+</body>
+</html>
